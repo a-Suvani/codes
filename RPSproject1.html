@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* body {
+      background-color: rgb(211, 167, 167);
+    }
+
+    .Score-Band {
+      background-color: rgb(255, 255, 235);
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: rgb(158, 0, 116);
+      border-width: 3px;
+      border-radius: 14px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 500px;
+      height: 300px;
+      font-size: 80px;
+      color: blue;
+      padding-left: 23px;
+    } */
+
+
+    body {
+      background-color: rgb(0, 0, 0);
+    }
+
+    .Score-Band {
+      background-color: rgb(100, 190, 245);
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: rgb(10, 133, 240);
+      border-width: 20px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 700px;
+      height: 300px;
+      font-size: 150px;
+      color: rgb(0, 0, 0);
+      padding-left: 95px;
+      padding-right: 53px;
+      top: 100px;
+      text-align: center;
+      padding-top: 78px;
+      padding-bottom: 30px;
+
+
+    }
+
+    #P img {
+      border-radius: 50%;
+      filter: invert(100%);
+      width: 400px;
+      margin: 20px;
+      border-color: aliceblue;
+
+
+    }
+
+    #R img {
+      border-radius: 50%;
+      filter: invert(100%);
+      width: 300px;
+      margin: 82px;
+
+    }
+
+    #S img {
+      border-radius: 52%;
+      border-top-left-radius: 52%;
+      border-top-right-radius: 52%;
+      border-bottom-right-radius: 52%;
+      border-bottom-left-radius: 52%;
+      filter: invert(100%);
+      width: 573px;
+      margin: 22px;
+      height: 450px;
+
+    }
+
+    #T1 {
+      color: rgb(247, 117, 204);
+      /* text-decora
+      tion: underline; */
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 250px;
+
+
+    }
+
+    .choices {
+      display: flex;
+      justify-content: center;
+      /* align items horizontally */
+      align-items: center;
+      /* align items vertically */
+    }
+
+    /* 
+    .Type {
+      color: white;
+      background-color: red;
+      font-size: 22px;
+      padding: 2px;
+      padding: 2px 10px;
+      margin: 10px; */
+    /* } */
+    #U1 {
+      position: absolute;
+      top: 110px;
+      left: 2701px;
+    }
+
+
+    #U2 {
+      position: absolute;
+      top: 110px;
+      left: 3469px;
+    }
+
+    .Type {
+      color: rgb(7, 1, 1);
+      background-color: rgb(131, 226, 242);
+      font-size: 81px;
+      padding: 6px;
+      padding: 11px 10px;
+      margin: 14px;
+
+    }
+
+    #P {
+      border: 5px solid rgb(0, 148, 159);
+      width: 500px;
+      border-radius: 50%;
+      border-width: 20px;
+      margin: 200px;
+    }
+
+    #S {
+      border: 5px solid rgb(0, 148, 159);
+      width: 600px;
+      border-radius: 50%;
+      border-width: 20px;
+      margin: 200px;
+    }
+
+    #R {
+      border: 5px solid rgb(0, 148, 159);
+      width: 600px;
+      border-radius: 50%;
+      border-width: 20px;
+      margin: 200px;
+
+    }
+
+    .choice:hover {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    Rock Paper Scissor
+  </header>
+  <div class=" Score-Band ">
+    <div id="U1" class=" Type "> User </div>
+    <div id="U2" class="Type"> Computer</div>
+    <span id="user-score ">0</span> : <span id="computer-score"> 0</span>
+  </div>
+
+  <div class="Result">
+    <p> Paper covers Rock ! you won !!! </p>
+  </div>
+  <p id="T1"> Make your move </p>
+  <div class="choices">
+    <div class="choice" id="R">
+      <img src="  https://hotemoji.com/images/dl/8/raised-fist-emoji-by-google.png" alt="Rock">
+    </div>
+    <div class="choice" id="P">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/007/147/621/original/raised-hand-emoji-color-icon-high-five-stop-hand-gesture-palm-counting-five-isolated-illustration-vector.jpg"
+        alt="Paper">
+    </div>
+    <div class="choice" id="S">
+      <img src=" https://emojis.wiki/thumbs/emojis/victory-hand.webp" alt="Scissor">
+    </div>
+  </div>
+  <script src="rps.js" charset="utf-8"></script>
+</body>
+
+</html>
