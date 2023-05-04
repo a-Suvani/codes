@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      font-weight: 300;
+      font-size: 30px;
+      color: rgb(255, 55, 0);
+      /* border-style: solid black; */
+      /* background-color: rgb(133, 166, 195); */
+      /* top: 10%;
+      border-width: 20px;
+      top: 30%; */
+    }
+
+    body {
+      background-image: url('https://image.slidesdocs.com/responsive-images/background/geometric-abstract-hs-electives-sociology-subject-for-high-school-9th-grade-concepts-in-probability-and-statistics-cute-memphis-powerpoint-background_f10603d485__960_540.jpg');
+      background-repeat: none;
+      background-size: cover;
+    }
+
+    button {
+      margin: 160px;
+      width: 200px;
+      height: 60px;
+      background-color: rgb(246, 176, 150);
+      color: rgb(11, 11, 11);
+      font-size: 23px;
+    }
+  </style>
+</head>
+
+<body>
+  <p> Converting Farenhiet to celsius and celsius to farenhiet viceversa</p>
+  <button id="Farenhiet-to-celsius "> Farenhiet to celsius </button>
+  <button id="Celsius-to-Farenhiet"> Celsius to Farenhiet </button>
+
+
+  <script>
+    function FarenhietToCelsius(F) {
+      return ((F - 32) * 5 / 9);
+    }
+    function CelsiusToFarenhiet(C) {
+      return (((C * 9) / 5) + 32);
+    }
+    document.getElementById("Farenhiet-to-celsius ").addEventListener("click", function () {
+
+      let farenhiet = prompt("Enter the temperature in Farenhiet:");
+      let celsius = FarenhietToCelsius(farenhiet);
+      alert(farenhiet + " when being converted into celsisus would give us" + celsius.toFixed(2));
+    })
+
+    document.getElementById("Celsius-to-Farenhiet").addEventListener("click", function () {
+
+      let celsius = prompt("Enter the temperature in Celsius:");
+      let farenhiet = CelsiusToFarenhiet(celsius);
+      alert(celsius + " when being converted into farenhiet  would give us" + farenhiet.toFixed(2));
+    })
+
+  </script>
+</body>
+
+</html>
