@@ -11,3 +11,24 @@ function mean() {
 
 }
 console.log(mean);
+
+//edited code
+let numbers = [];
+
+let range = prompt("Enter the range of the string:");
+
+for ( let i = 0; i <= range; i++) {
+    let num = parseInt(prompt(`Enter the num ${i+1}`));
+    numbers.push(num);
+}
+ 
+function mean() { 
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+    }
+    let mean = sum/numbers.length;
+    console.log(`Mean: ${mean}`);
+}
+
+mean();
