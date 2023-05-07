@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    let NumAttempts = 0
+    while (NumAttempts < 3) {
+      let num = prompt("Enter the guess number :");
+
+      if (num != 3) {
+        alert(`Sorry! ${num} is not the correct number!`);
+        NumAttempts++;
+      }
+      else {
+        alert("You got the number right!");
+        break;
+      }
+    }
+
+    if (NumAttempts == 3) {
+      alert("Sorry, you have used up all your attempts. The correct number was 3.");
+    }
+
+
+  </script>
+</body>
+
+</html>
