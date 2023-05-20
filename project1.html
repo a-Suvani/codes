@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Flipper || simple </title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <h2> Color Flipper</h2>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            Simple
+          </a>
+        </li>
+        <li>
+          <a href="hex.html">
+            Hex
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <h2> background color: <span class="hello">
+          #f1f5f8
+        </span></h2>
+      <button class="btn " id="btn"> Click me</button>
+
+    </div>
+  </main>
+  <script>
+    const colors = ["green", "red", "yellow", "blue", "black"];
+    const btn = document.getElementById("btn");
+    const color = document.querySelector(".color");
+
+    // btn.addEventListener("click", function () {
+    //   //to get random number between 0-3
+    //   const randomNumber = getRandomNumber();
+    //   console.log(randomNumber);
+    //   document.body.style.backgroundColor = colors[randomNumber];
+    //   color.textContent = colors[randomNumber];
+    // });
+
+    btn.addEventListener("click", function () {
+      const randomColor = getRandomColor();
+      // console.log(randomColor);
+      document.body.style.backgroundColor = randomColor;
+      // color.textContent = randomColor;
+    });
+    // function getRandomNumber() {
+    //   return Math.floor(Math.random() * colors.length);
+    // }
+
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+  </script>
+</body>
+
+</html>
