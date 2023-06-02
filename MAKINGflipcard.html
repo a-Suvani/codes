@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 FLIP CARD ANIMATION CODES</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .flip-card {
+      top: 40%;
+      bottom: 60%;
+      padding-top: 17%;
+      padding-bottom: 18%;
+      padding-left: 49%;
+      padding-right: -28%;
+      margin: auto;
+      background-color: transparent;
+      width: 250px;
+      height: 266px;
+      perspective: 1000px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border: 1px solid rgb(0, 100, 85);
+      border-radius: 1rem;
+    }
+
+    .flip-card-front {
+      background: linear-gradient(120deg, rgb(0, 133, 82) 60%, rgb(1, 223, 175) 88%,
+          rgb(0, 173, 136) 40%, rgba(1, 110, 86, 0.603) 48%);
+      color: rgb(0, 121, 84);
+    }
+
+    .flip-card-back {
+      background: linear-gradient(120deg, rgb(0, 171, 134) 30%, rgb(0, 158, 134) 88%,
+          rgb(0, 136, 118) 40%, transparent 78%);
+      color: white;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+      </div>
+      <div class="flip-card-back">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
