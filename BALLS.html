@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .background-animation {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .background-animation:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.8;
+      animation: colorCycle 10s linear infinite;
+    }
+
+    @keyframes colorCycle {
+      0% {
+        background-color: #e44646;
+      }
+
+      50% {
+        background-color: #66ed66;
+      }
+
+      100% {
+        background-color: #7c7cfb;
+      }
+    }
+
+    .background-animation .particle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      animation: particleMove 5s linear infinite;
+    }
+
+    /* Add the colors and animation durations for each particle */
+    .background-animation .particle:nth-child(1) {
+      background-color: #0f0e0e;
+      animation-duration: 3s;
+    }
+
+    /* Add the styles for other particles */
+
+    /* Repeat the .particle styles for all 20 particles */
+
+    @keyframes particleMove {
+      0% {
+        top: 0;
+        left: 0;
+      }
+
+      25% {
+        top: 0;
+        left: calc(100% - 20px);
+      }
+
+      50% {
+        top: calc(100% - 20px);
+        left: calc(100% - 20px);
+      }
+
+      75% {
+        top: calc(100% - 20px);
+        left: 0;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-animation">
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+</body>
+
+</html>
